@@ -7,20 +7,6 @@ typedef struct multiboot Multiboot;
 
 /* end split */
 
-/* TODO: split off into stdint.h */
-
-typedef unsigned u32;
-typedef int i32;
-
-typedef unsigned short u16;
-typedef short i16;
-
-typedef unsigned char u8;
-typedef char i8;
-
-/* end split */
-
-
 int main(u32 multibootMagic, Multiboot* multibootPointer) {
-    
+    return 0xDEADBABA;
 }
