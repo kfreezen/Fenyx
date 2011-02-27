@@ -1,0 +1,5 @@
+#!/bin/bash
+
+read _build < build
+let _build=_build+1
+echo $_build > build

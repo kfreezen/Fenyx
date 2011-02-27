@@ -1,5 +1,6 @@
 // #include <multiboot.h>
-// #include <stdint.h>
+#include <stdint.h>
+#include <gdt.h>
 
 /* TODO: split off into multiboot.h */
 typedef struct multiboot Multiboot;
@@ -7,6 +8,17 @@ typedef struct multiboot Multiboot;
 
 /* end split */
 
+/* version
+	v0.0.8
+*/
+
 int main(u32 multibootMagic, Multiboot* multibootPointer) {
-    return 0xDEADBABA;
+	u8* vidmem = 0xB8000;
+	
+	GdtInit();
+	
+	vidmem[2] = 'b';
+	vidmem[3] = 0x07;
+	
+	return 0xE2D0F125;
 }
