@@ -1,0 +1,3 @@
+src/main.c:/* TODO: split off into multiboot.h */
+src/main.c:/* TODO: define this struct */
+src/main.c:/* TODO: split off into stdint.h */
